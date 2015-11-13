@@ -1,0 +1,51 @@
+INSERT INTO `icwa` (`qset`, `qno`, `question`, `option1`, `option2`, `option3`, `option4`, `result`, `analysis`) VALUES
+('1', 1, 'Demand is affected by', 'rachet effect', 'demonstration effect', 'both a and b', 'none', 'b', ' '),
+
+('1', 2, 'Which of the following cost curve is nerver U-shaped?', 'avg cost curve', 'marginal cost curve', 'avg variable cost curve', 'avg fixed cost curve', 'b', ' '),
+
+('1', 3, 'AVC is given by', 'w/MP', 'w/AP', 'w/TC', 'w/ab', 'b', ' '),
+
+('1', 4, 'Marginal Cost is closely associated with.', 'variable cost', 'total cost', 'avg cost', 'fixed cost', 'b', ' '),
+
+('1', 5, 'Increase or decrease in quantity demanded is based on', 'changes in income', 'only price changes', 'changes in tastes', 'none', 'b', ' '),
+
+('1', 6, 'The price elasticity is infinity, slope of demand curve is', 'zero', 'one', 'infinite', 'more than zero', 'b', ' '),
+
+('1', 7, 'The largest number amongst the following that will perfectly divide 101100 - 1 is', '100', '10,000', '100100', '100,000', 'b', ' '),
+
+('1', 8, 'The price elasticity is infinite, the demand curve is', 'downward sloping', 'vertical', 'horizontal', 'none', 'b', ' '),
+
+('1', 9, 'With P as Rs. 7, only 7 pencils are purchased. But as p falls to Rs.6, 8pencils were purchased. Then the price elasticity value is', 'one', 'less than one', 'greater than one', 'zero', 'b', ' '),
+
+('1', 10, 'Population explosion takes place in _____stage', 'first', 'second', 'third', 'fourth', 'b', ' '),
+
+('1', 11, 'An unregistered firm cannot claim:', 'set on', 'set off', 'both 1 and 2', 'none', 'b', ' '),
+
+('1', 12, 'For the purposes of entering into a contract, a minor is a person who has not completed the age of', '16yrs', '18yrs', '20yrs', '21yrs', 'b', ' '),
+
+('1', 13, 'With P as Rs. 7, only 7 pencils are purchased. But as p falls to Rs.6, 8pencils were purchased. Then the price elasticity value is', 'one', 'less than one', 'greater than one', 'zero', 'b', ' '),
+
+('1', 14, 'Demand is affected by', 'rachet effect', 'demonstration effect', 'both a and b', 'none', 'b', ' '),
+
+('1', 15, 'AVC is given by', 'w/MP', 'w/AP', 'w/TC', 'w/ab', 'b', ' '),
+
+('1', 16, 'The consideration or object of an agreement is considered unlawful, if it is', 'forbiden by law', 'fraudulent', 'immoral', 'all of these', 'b', ' '),
+
+('1', 17, 'A agrees to pay Rs. 50,000 to B if he kills C.  The agreement is', 'void', 'valid', 'voidable', 'contingent', 'b', ' '),
+
+('1', 18, 'An agreement in restraint of marriage is valid in case of following persons.', 'minors', 'educated', 'married', 'none', 'b', ' '),
+
+('1', 19, 'An offer may lapse by:', 'revocation', 'counter offer', 'rejection of offer by offeree', 'all of these', 'b', ' '),
+
+('1', 20,'The largest number amongst the following that will perfectly divide 101100 - 1 is', '100', '10,000', '100100', '100,000', 'b', ' '),
+
+('1', 21, 'Population explosion takes place in _____stage', 'first', 'second', 'third', 'fourth', 'b', ' '),
+
+('1', 22, 'The price elasticity is infinite, the demand curve is', 'downward sloping', 'vertical', 'horizontal', 'none', 'b', ' '),
+
+('1', 23, 'An unregistered firm cannot claim:', 'set on', 'set off', 'both 1 and 2', 'none', 'b', ' '),
+
+('1', 24, 'The largest number amongst the following that will perfectly divide 101100 - 1 is', '100', '10,000', '100100', '100,000', 'b', ' '),
+
+('1', 25, 'The largest number amongst the following that will perfectly divide 101100 - 1 is', '100', '10,000', '100100', '100,000', 'b', ' ');
+

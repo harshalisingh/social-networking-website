@@ -1,0 +1,206 @@
+/* 
+----------------------------------------------------------------------------- 
+Made by Koa Metter (Iamkoa) - Nov 19, 2007
+For use with Vision CSS gallery
+-----------------------------------------------------------------------------*/
+
+body {
+	background-color:#263f57;
+	text-align: center;
+	font: 11px/1.5em Helvetica, Arial, Verdana, sans-serif;
+	background-image:url('../img/bg/image_add.png');
+	color: #212121;
+	letter-spacing:0px;
+	padding:0;
+	margin:0;
+}
+a:hover,a:active
+{
+background:inherit;
+}
+
+a.link {
+	background-color:#fff;
+	padding:2px;
+	color:#212121;
+	font-size:12px;
+}
+
+h1 {
+	padding:0;
+	font-size:28px;
+	font-weight:bold;
+	text-align:left;
+	color:#fff;
+	margin:0;
+	margin-top:30px;
+	background-image:url('../img/bg/bg-screen.png');
+	padding:20px;
+}
+
+ul {
+	text-align:left;
+	font-size:14px;
+	letter-spacing:1.5px;
+	list-style-type:none;
+}
+
+ul li, p {
+	list-style-type:none;
+	margin-top:10px;
+	background-image:url('../img/bg/bg-screen.png');
+	padding:10px;
+	color:#fff;
+}
+
+p {
+	width:580px;
+	font-size:14px;
+	letter-spacing:1px;
+	text-align:left;
+}
+
+div#inner {
+	position:relative;
+	margin:0 auto;
+	text-align:center;
+	width:600px;
+	background-color:transparent;
+}
+
+div#content {
+	position:relative;
+	width:600px;
+	margin-top:30px;
+	background-color:transparent;
+}
+
+div#content {
+  position:relative;
+  overflow:hidden;
+}
+
+div#content img {
+	position:relative;
+	border:none;
+}
+
+* html div#content {
+	float: left;
+}
+
+* html div.controls a {
+	height: 10000px;
+	background-position: center 150px;
+}
+
+div.controls a {
+	text-indent: -5000px;
+	overflow: hidden;
+	outline: none;
+	position: absolute;
+	top: 0;
+	width: 40%;
+	height: 100%;
+	background-position: center center;
+	background-repeat: no-repeat;
+	opacity: 0;
+	filter: alpha(opacity=0);
+	z-index:1;
+}
+
+div.controls a.previous {
+	left: 0;
+	background-image: url('../img/controller/controller_prev.png');
+}
+
+div.controls a.next {
+	right: 0;
+	background-image: url('../img/controller/controller_next.png');
+}
+		
+div.controls a:hover {
+	opacity: 0.40;
+	filter: alpha(opacity=40);
+	z-index:1;
+}
+
+div#content .details_bg {
+	background-color:#000;
+	opacity: 0.60;
+	filter: alpha(opacity=60);
+	height:50px;
+	width:600px;
+	bottom:10px;
+	left:10px;
+	position:absolute;
+	z-index:2;
+}
+
+div#content #details {
+	position:absolute;
+	color:#fff;
+	font: 36px/.9em Helvetica, Arial, Verdana, sans-serif;
+	font-weight:bold;
+	text-align:left;
+	top:10px;
+	z-index:1;
+	left:0px;
+	width:600px;
+	z-index:3;
+	text-align:center;
+}
+
+/* corners */
+
+div.corners .left_top {
+	position:absolute;
+	background:url('../img/corners/top_left.png') no-repeat top left;
+	width:7px;
+	height:7px;
+	overflow:hidden;
+	top:10px;
+	left:10px;
+	z-index:20;
+}
+
+div.corners .right_top {
+	position:absolute;
+	background:url('../img/corners/top_right.png') no-repeat top right;
+	width:7px;
+	height:7px;
+	overflow:hidden;
+	top:10px;
+	right:10px;
+	z-index:20;
+}
+
+div.corners .right_bottom {
+	position:absolute;
+	background:url('../img/corners/bottom_right.png') no-repeat top right;
+	width:7px;
+	height:7px;
+	overflow:hidden;
+	bottom:10px;
+	right:10px;
+	z-index:20;
+}
+
+div.corners .left_bottom {
+	position:absolute;
+	background:url('../img/corners/bottom_left.png') no-repeat top right;
+	width:7px;
+	height:7px;
+	overflow:hidden;
+	bottom:10px;
+	left:10px;
+	z-index:20;
+}
+
+div#content {
+	position:relative;
+	background-image:url('../img/bg/bg-screen.png');
+	width:600px;
+	height:400px;
+	padding:10px;
+}

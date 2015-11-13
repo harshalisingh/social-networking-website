@@ -1,0 +1,50 @@
+INSERT INTO `cs` (`qset`, `qno`, `question`, `option1`, `option2`, `option3`, `option4`, `result`, `analysis`) VALUES
+('1', 1, 'What is legal terminology for the doing or not doing of something which the promisor desires to be done or not done?', 'desires', 'wishes', 'considerations', 'promise', 'b', ' '),
+
+('1', 2, 'A stipulation which is collateral to the main purpose of the contract, and if proves false, gives the buyer only a right to claim damages, is known as', 'conditions', 'guarantee', 'warranty', 'none', 'b', ' '),
+
+('1', 3, 'The Sale of Goods Act, 1930 deals with', 'sales', 'mortgage', 'pledge', 'all of above', 'b', ' '),
+
+('1', 4, 'When the consent of a party is obtained by fraud, the contract is;', 'void', 'voidable', 'valid', 'illegal', 'b', ' '),
+
+('1',5, 'The conditions and warranties may be in the form of', 'express', 'implied', 'either 1 or 2', 'none of above', 'b', ' '),
+
+('1',6, 'Moral pressure is involved in the case of', 'coercion', 'undue influence', 'misrepresentation', 'fraud', 'b', ' '),
+
+('1', 7, 'If a seller handed over the keys of a warehouse containing the goods to the buyer results in', 'constructive delivery', 'actual delivery', 'symbolic delivery', 'none', 'b', ' '),
+
+('1', 8, 'The person who buys or agrees to buy goods is known as', 'consumer', 'buyer', 'both 1 and 2', 'none of above', 'b', ' '),
+
+('1', 9, 'In an auction sale, if the seller makes use of pretended bidding to raise the price, then the sale is', 'valid', 'void', 'voidable', 'illegal', 'b', ' '),
+
+('1', 10, 'Where in an auction sale, the seller appoints more than one bidder, the sale is', 'void', 'illegal', 'conditional', 'voidable', 'b', ' '),
+
+('1', 11, 'What is legal terminology for the doing or not doing of something which the promisor desires to be done or not done?', 'desires', 'wishes', 'considerations', 'promise', 'b', ' '),
+
+('1', 12, 'A stipulation which is collateral to the main purpose of the contract, and if proves false, gives the buyer only a right to claim damages, is known as', 'conditions', 'guarantee', 'warranty', 'none', 'b', ' '),
+
+('1', 13, 'The Sale of Goods Act, 1930 deals with', 'sales', 'mortgage', 'pledge', 'all of above', 'b', ' '),
+
+('1', 14, 'If a seller handed over the keys of a warehouse containing the goods to the buyer results in', 'constructive delivery', 'actual delivery', 'symbolic delivery', 'none', 'b', ' '),
+
+('1', 15, 'An agreement which is enforceable by law at the option of one or more of the parties thereon but not at the option of the other or others is a', 'valid', 'void', 'voidable', 'illegal', 'b', ' '),
+
+('1', 16, 'Which of the following elements does not affect the free consent of the parties', 'coercion', 'fraud', 'incompetency', 'undue influence', 'b', ' '),
+
+('1', 17, 'When the consent of a party is obtained by fraud, the contract is;', 'void', 'voidable', 'valid', 'illegal', 'b', ' '),
+
+('1', 18, 'Moral pressure is involved in the case of', 'coercion', 'undue influence', 'misrepresentation', 'fraud', 'b', ' '),
+
+('1', 19, 'What is legal terminology for the doing or not doing of something which the promisor desires to be done or not done?', 'desires', 'wishes', 'considerations', 'promise', 'b', ' '),
+
+('1', 20, 'A threatens to kill B if he does not agree to sell his scooter to him for Rs. 1000 only.  Here Bs consent is obtained by', 'undue influence', 'fraud', 'coercion', 'none', 'b', ' '),
+
+('1', 21, 'What is legal terminology for the doing or not doing of something which the promisor desires to be done or not done?', 'desires', 'wishes', 'considerations', 'promise', 'b', ' '),
+
+('1', 22, 'The conditions and warranties may be in the form of', 'express', 'implied', 'either 1 or 2', 'none of above', 'b', ' '),
+
+('1', 23, 'What is legal terminology for the doing or not doing of something which the promisor desires to be done or not done?', 'desires', 'wishes', 'considerations', 'promise', 'b', ' '),
+
+('1', 24, 'What is legal terminology for the doing or not doing of something which the promisor desires to be done or not done?', 'desires', 'wishes', 'considerations', 'promise', 'b', ' '),
+
+('1', 25, 'Which of the following elements does not affect the free consent of the parties', 'coercion', 'fraud', 'incompetency', 'undue influence', 'b', ' ');

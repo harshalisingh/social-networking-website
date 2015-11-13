@@ -1,0 +1,25 @@
+ul li, p, div#content, h1 {
+	position:relative;
+	background-image: none;
+	background-color:#212121;
+}
+
+div.corners .left_top {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/css-gallery/img/corners/top_left.png');
+}
+
+div.corners .left_bottom {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/css-gallery/img/corners/bottom_left.png');
+}
+
+div.corners .right_top {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/css-gallery/img/corners/top_right.png');
+}
+
+div.corners .right_bottom {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=crop, src='/css-gallery/img/corners/bottom_right.png');
+}

@@ -1,0 +1,581 @@
+-- phpMyAdmin SQL Dump
+-- version 2.11.5
+-- http://www.phpmyadmin.net
+--
+-- Host: localhost
+-- Generation Time: May 03, 2011 at 12:20 AM
+-- Server version: 5.0.51
+-- PHP Version: 5.2.5
+
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
+
+--
+-- Database: `irkut`
+--
+CREATE DATABASE `irkut` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `irkut`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `album`
+--
+
+CREATE TABLE `album` (
+  `aid` int(10) NOT NULL,
+  `username` varchar(25) NOT NULL,
+  `alname` varchar(25) NOT NULL,
+  `alface` varchar(50) NOT NULL,
+  `date` varchar(15) NOT NULL,
+  `descripn` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `album`
+--
+
+INSERT INTO `album` (`aid`, `username`, `alname`, `alface`, `date`, `descripn`) VALUES
+(7, 'Rahul', 'wc', '02042011114.jpg', '2011/04/04', 'kuch nhi'),
+(8, 'MANOJ', 'Virat kohli', '7686.jpg', '2011/04/17', 'just fun');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `alcounter`
+--
+
+CREATE TABLE `alcounter` (
+  `count` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `alcounter`
+--
+
+INSERT INTO `alcounter` (`count`) VALUES
+('8');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `c`
+--
+
+CREATE TABLE `c` (
+  `qset` varchar(2) NOT NULL,
+  `qno` varchar(10) NOT NULL,
+  `question` varchar(250) NOT NULL,
+  `option1` varchar(25) NOT NULL,
+  `option2` varchar(25) NOT NULL,
+  `option3` varchar(25) NOT NULL,
+  `option4` varchar(25) NOT NULL,
+  `result` varchar(3) NOT NULL,
+  `analysis` varchar(400) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `c`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `cat`
+--
+
+CREATE TABLE `cat` (
+  `qset` varchar(2) NOT NULL,
+  `qno` int(5) NOT NULL,
+  `question` varchar(500) NOT NULL,
+  `option1` varchar(25) NOT NULL,
+  `option2` varchar(25) NOT NULL,
+  `option3` varchar(25) NOT NULL,
+  `option4` varchar(25) NOT NULL,
+  `result` varchar(3) NOT NULL,
+  `analysis` varchar(800) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `cat`
+--
+
+INSERT INTO `cat` (`qset`, `qno`, `question`, `option1`, `option2`, `option3`, `option4`, `result`, `analysis`) VALUES
+('1', 1, 'The largest number amongst the following that will perfectly divide 101100 - 1 is', '100', '10,000', '100100', '100,000', 'b', 'The easiest way to solve such problems for CAT puposes is trial and error or by back substituting answers in the choices given.  1012 = 10201. 1012 - 1 = 10200. This is divisible by 100.  Similarly try for 1013 - 1 = 1030301 - 1 = 1030300.  So you can safely conclude that (1011 - 1) to (1019 - 1) will be divisible by 100. (10110 - 1) to (10199 - 1) will be divisible by 1000. Therefore, (101100 - 1) will be divisible by 10,000. '),
+('1', 2, 'A number when divided by a divisor leaves a remainder of 24. When twice the original number is divided by the same divisor, the remainder is 11. What is the value of the divisor? ', '13', '59', '35', '37', 'd', 'Let the original number be ''a'' Let the divisor be ''d''  Let the quotient of the division of a by d be ''x''  Therefore, we can write the relation as Number theory question = x and the remainder is 24. i.e., a = dx + 24  When twice the original number is divided by d, 2a is divided by d. We know that a = dx + 24. Therefore, 2a = 2dx + 48  The problem states that number theory problem leaves a remainder of 11. 2dx is perfectly divisible by d and will therefore, not leave a remainder.  The remainder of 11 was obtained by dividing 48 by d. When 48 is divided by 37, the remainder that one will obtain is 11. Hence, the divisor is 37.'),
+('1', 3, 'How many keystrokes are needed to type numbers from 1 to 1000? ', '3001', '2893', '2704', '2890', 'b', 'While typing numbers from 1 to 1000, you have 9 single digit numbers from 1 to 9. Each of them require one keystroke. That is 9 key strokes.  There are 90 two-digit numbers, from 10 to 99. Each of these numbers require 2 keystrokes. Therefore, one requires 180 keystrokes to type the 2 digit numbers.  There are 900 three-digit numbers, from 100 to 999. Each of these numbers require 3 keystrokes. Therefore, one requires 2700 keystrokes to type these 3 digit numbers.  Then 1000 is a four-digit number which requires 4 keystrokes.  Totally, therefore, one requires 9 + 180 + 2700 + 4 = 2893 keystrokes.'),
+('1', 4, 'When 242 is divided by a certain divisor the remainder obtained is 8. When 698 is divided by the same divisor the remainder obtained is 9. However, when the sum of the two numbers 242 and 698 is divided by the divisor, the remainder obtained is 4. Wh', '11', '17', '13', '23', 'c', 'Let the divisor be d.  When 242 is divided by the divisor, let the quotient be ''x'' and we know that the remainder is 8. Therefore, 242 = xd + 8  Similarly, let y be the quotient when 698 is divided by d. Then, 698 = yd + 9.  242 + 698 = 940 = xd + yd + 8 + 9 940 = xd + yd + 17 As xd and yd are divisible by d, the remainder when 940 is divided by d should have been 17.  However, as the question states that the remainder is 4, it would be possible only whenRemainders, division leaves a remainder of 4.  If the remainder obtained is 4 when 17 is divided by d, then d has to be 13.'),
+('1', 5, 'Let n be the number of different 5 digit numbers, divisible by 4 with the digits 1, 2, 3, 4, 5 and 6, no digit being repeated in the numbers. What is the value of n? ', '144', '168', '192', 'none of these', 'c', 'Test of divisibility by 4 is that the last two digits should be divisible by 4.  Case 1 : When the last 2 digits are 12, i.e., _ _ _ 12 = 4 * 3 * 2 = 24 numbers  Case 2 : When the last 2 digits are 16, there are 24 numbers  Case 3 : When the last 2 digits are 24 there are 24 numbers  Case 4 : When the last 2 digits are 32 there are 24numbers  Case 5 : When last 2 digits are 36 there are 24 numbers  Case 6 : When last 2 digits are 52 there are 24 numbers  Case 7 : When last 2 digits are 56 there are 24 numbers  Case 8 : When last 2 digits are 64 there are 24 numbers  Total = 8 * 24 = 192'),
+('1', 6, ' complete the sentense:The fact that the- of confrontation is no longer as popular as it once was - procatss in race relations.          ', 'insidiousness - reiterate', ' practice - inculcates ', 'glimmer - foreshadows ', ' technique - presages ', 'd', 'thats fit better than remaining'),
+('1', 7, 'A train running at the speed of 60 km/hr crosses a pole in 9 seconds. What is the length of the train? ', '120', '180', '324', '150', 'd', 'Speed= 60 x 	5 /18	m/sec 	= 		50/3 	m/sec. <br> Length of the train = (Speed x Time) = 		50 	x 9 	m = 150 m'),
+('1', 8, 'A train 125 m long passes a man, running at 5 km/hr in the same direction in which the train is going, in 10 seconds. The speed of the train is:', '45', '50', '54', '55', 'b', 'spped of train relative to man=125/10 m/sec=(125/10)*(18/5)=45 km/hr<br>Let the speed of the train be x km/hr. Then, relative speed = (x - 5) km/hr.<br>x-5=45<br>x=50.'),
+('1', 9, 'The length of the bridge, which a train 130 metres long and travelling at 45 km/hr can cross in 30 seconds, is: ', '200', '225', '245', '250', 'b', 'Let the speeds of the two trains be x m/sec and y m/sec respectively.<br>  Then, length of the first train = 27x metres,  and length of the second train = 17y metres.<br>(27x+17y)/(x+y)=23<br>x/y=3/2.'),
+('1', 10, '	  A can do a work in 15 days and B in 20 days. If they work on it together for 4 days, then the fraction of the work that is left is :', '1/4', '1/10', '7/15', '8/15', 'd', 'A''s 1 day''s work = 	1 /15<br>  B''s 1 day''s work = 	1/20 <br> (A + B)''s 1 day''s work = 	( 	1 /15	+ 	1/20 	) 	= 	7 /60  <br>(A + B)''s 4 day''s work = 	( 	7/60 	x 4 	) 	= 	7/15. <br> Therefore, Remaining work = 	( 	1 - 	7 /15	) 	= 	8 /15 	'),
+('1', 11, 'A, B and C can do a piece of work in 20, 30 and 60 days respectively. In how many days can A do the work if he is assisted by B and C on every third day? ', '12 days', '15 days', '16days', '18 days', 'b', 'A''s 2 day''s work = 		1 	x 2/20 		= 	1/10 <br> (A + B + C)''s 1 day''s work = 		1/20 	+ 	1/30 	+	1 /60		= 	6/60 	= 	1/10 	. br> Work done in 3 days = 		1/10 	+ 	1/10 		= 	1 /5	<br> Now, 	1/5 	work is done in 3 days. <br> Whole work will be done in (3 x 5) = 15 '),
+('1', 12, 'synonym-CORPULENT', 'Lean', 'Gaunt', 'Emaciated', 'Obese', 'd', 'no description'),
+('1', 13, 'synonym-BRIEF', 'Limited', 'Small', 'Little', 'Short', 'd', 'no description'),
+('1', 14, 'synonym-VENT', 'Opening', 'Stodge', 'End', 'Past tense od GO', 'a', 'no description'),
+('1', 15, 'synonym-August', 'common', 'ridiculous', 'dignified ', 'petty', 'c', 'no description'),
+('1', 16, 'Antonym-ENORMOUS', 'Soft', 'Average', 'Tiny ', 'Weak', 'c', 'no description'),
+('1', 17, 'Antonym-ARTIFICIAL', 'Red', 'Natural', 'Truthful', 'Solid', 'b', 'no description'),
+('1', 18, 'Antonym-EXODUS', 'Influx', 'Home-coming', 'Return', 'Restoration', 'a', 'no description'),
+('1', 19, 'Antonym-EXPAND', 'convert', 'Condense', 'Congest', 'Conclude', 'b', 'no description'),
+('1', 20, 'Verbal Reasoning:Vincent has a paper route. Each morning, he delivers 37 newspapers to customers in his neighborhood. It takes Vincent 50 minutes to deliver all the papers. If Vincent is sick or has other plans, his friend Thomas, who lives on the sa', 'Vincent and Thomas live i', 'It takes Thomas more than', 'It is dark outside when V', 'Thomas would like to have', 'a', 'The fact that Vincent and Thomas live on the same street indicates that they live in the same neighborhood. There is no support for any of the other choices.'),
+('1', 21, 'Verbal-Reasonong:The Pacific yew is an evergreen tree that grows in the Pacific Northwest. The Pacific yew has a fleshy, poisonous fruit. Recently, taxol, a substance found in the bark of the Pacific yew, was discovered to be a promising new anticanc', 'Taxol is poisonous when t', ' 	Taxol has cured people ', ' 	People should not eat t', '. 	The Pacific yew was co', 'c', 'Given the information presented, the only statement that could be considered true is that the fruit should not be eaten because it is poisonous. There is no support that taxol is poisonous or that taxol has cured anyone (choices a and b). There is no support for choice d. '),
+('1', 22, 'SCD, TEF, UGH, ____, WKL A. ', 'CMN', 'UJI', 'VIJ', 'IJT', 'c', 'There are two alphabetical series here. The first series is with the first letters only: STUVW. The second series involves the remaining letters: CD, EF, GH, IJ, KL. '),
+('1', 23, 'B2CD, _____, BCD4, B5CD, BC6D ', 'B2C2D', 'BC3D', 'B2C3D', 'BCD7', 'b', 'Because the letters are the same, concentrate on the number series, which is a simple 2, 3, 4, 5, 6 series, and follows each letter in order. '),
+('1', 24, 'FAG, GAF, HAI, IAH, ____ ', 'JAK', 'HAL', 'HAK', 'JAI', 'a', 'The middle letters are static, so concentrate on the first and third letters. The series involves an alphabetical order with a reversal of the letters. The first letters are in alphabetical order: F, G, H, I , J. The second and fourth segments are reversals of the first and third segments. The missing segment begins with a new letter. '),
+('1', 25, 'ELFA, GLHA, ILJA, _____, MLNA ', 'OLPA', 'KLMA', 'LLMA', 'KLLA', 'd', 'The second and forth letters in the series, L and A, are static. The first and third letters consist of an alphabetical order beginning with the letter E.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `chat`
+--
+
+CREATE TABLE `chat` (
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `from` varchar(255) NOT NULL default '',
+  `to` varchar(255) NOT NULL default '',
+  `message` text NOT NULL,
+  `sent` datetime NOT NULL default '0000-00-00 00:00:00',
+  `recd` int(10) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
+
+--
+-- Dumping data for table `chat`
+--
+
+INSERT INTO `chat` (`id`, `from`, `to`, `message`, `sent`, `recd`) VALUES
+(1, 'Sonam', 'MANOJ', 'hii', '2011-04-24 00:25:09', 1),
+(2, 'MANOJ', 'Sonam', 'hello', '2011-04-24 00:25:24', 1),
+(3, 'MANOJ', 'Sonam', 'hii', '2011-04-24 00:26:56', 1),
+(4, 'Sonam', 'MANOJ', 'hello', '2011-04-24 00:27:06', 1),
+(5, 'Sonam', 'MANOJ', 'hii', '2011-04-24 00:38:17', 1),
+(6, 'prakhil', 'Sonam', 'hii', '2011-04-24 00:44:46', 1),
+(7, 'Sonam', 'MANOJ', 'pagal', '2011-04-24 00:49:35', 1),
+(8, 'MANOJ', 'Sonam', 'main nahi hoon', '2011-04-24 00:49:43', 1),
+(9, 'Sonam', 'MANOJ', 'hii manoj', '2011-04-24 12:16:59', 1),
+(10, 'MANOJ', 'Sonam', 'hiiiiii', '2011-04-24 12:17:08', 1),
+(11, 'MANOJ', 'Sonam', 'wass up', '2011-04-24 12:17:15', 1),
+(12, 'Sonam', 'MANOJ', 'nothing', '2011-04-24 12:17:24', 1),
+(13, 'Sonam', 'MANOJ', 'just doing timepass', '2011-04-24 12:17:30', 1),
+(14, 'MANOJ', 'Sonam', 'okkk', '2011-04-24 12:17:37', 1),
+(15, 'Sonam', 'MANOJ', 'what r u doing?', '2011-04-24 12:17:49', 1),
+(16, 'MANOJ', 'Sonam', 'i am making my Project', '2011-04-24 12:18:09', 1),
+(17, 'MANOJ', 'Sonam', 'Student WOrld', '2011-04-24 12:18:16', 1),
+(18, 'Sonam', 'MANOJ', 'okk', '2011-04-24 12:18:22', 1),
+(19, 'Sonam', 'MANOJ', 'thats graet', '2011-04-24 12:18:25', 1),
+(20, 'Sonam', 'MANOJ', 'hello', '2011-04-24 16:22:37', 1),
+(21, 'MANOJ', 'Sonam', 'hi', '2011-04-24 16:22:43', 1),
+(22, 'Sonam', 'MANOJ', 'bye', '2011-04-24 16:22:48', 1),
+(23, 'Tushar', 'Sonam', 'yaa', '2011-04-24 16:24:19', 1),
+(24, 'Sonam', 'Tushar', 'yo', '2011-04-24 16:24:27', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `comment`
+--
+
+CREATE TABLE `comment` (
+  `sent_from` varchar(15) NOT NULL,
+  `message` varchar(160) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `comment`
+--
+
+INSERT INTO `comment` (`sent_from`, `message`) VALUES
+('MANOJ', 'yo yo'),
+('MANOJ', 'wewqeee');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `counter`
+--
+
+CREATE TABLE `counter` (
+  `flag` int(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `counter`
+--
+
+INSERT INTO `counter` (`flag`) VALUES
+(40);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `friendreq`
+--
+
+CREATE TABLE `friendreq` (
+  `username` varchar(20) NOT NULL,
+  `reqname` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `friendreq`
+--
+
+INSERT INTO `friendreq` (`username`, `reqname`) VALUES
+('', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `friends`
+--
+
+CREATE TABLE `friends` (
+  `username` varchar(20) NOT NULL,
+  `friendname` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `friends`
+--
+
+INSERT INTO `friends` (`username`, `friendname`) VALUES
+('Tushar', 'Sonam'),
+('Sonam', 'Tushar'),
+('Rahul', 'Sonam'),
+('Sonam', 'Rahul'),
+('prakhil1', 'MANOJ'),
+('MANOJ', 'prakhil1'),
+('Rahul', 'MANOJ'),
+('MANOJ', 'Rahul'),
+('MANOJ', 'Sonam'),
+('MANOJ', 'Sonam'),
+('Sonam', 'MANOJ');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gate`
+--
+
+CREATE TABLE `gate` (
+  `qset` varchar(2) NOT NULL,
+  `qno` varchar(3) NOT NULL,
+  `question` varchar(250) NOT NULL,
+  `option1` varchar(25) NOT NULL,
+  `option2` varchar(25) NOT NULL,
+  `option3` varchar(25) NOT NULL,
+  `option4` varchar(25) NOT NULL,
+  `result` varchar(3) NOT NULL,
+  `analysis` varchar(400) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gate`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gmat`
+--
+
+CREATE TABLE `gmat` (
+  `qset` varchar(2) NOT NULL,
+  `qno` varchar(10) NOT NULL,
+  `question` varchar(250) NOT NULL,
+  `option1` varchar(25) NOT NULL,
+  `option2` varchar(25) NOT NULL,
+  `option3` varchar(25) NOT NULL,
+  `option4` varchar(25) NOT NULL,
+  `result` varchar(2) NOT NULL,
+  `analysis` varchar(400) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gmat`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gre`
+--
+
+CREATE TABLE `gre` (
+  `qset` varchar(2) NOT NULL,
+  `qno` varchar(10) NOT NULL,
+  `question` varchar(250) NOT NULL,
+  `option1` varchar(25) NOT NULL,
+  `option2` varchar(25) NOT NULL,
+  `option3` varchar(25) NOT NULL,
+  `option4` varchar(25) NOT NULL,
+  `result` varchar(3) NOT NULL,
+  `analysis` varchar(400) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gre`
+--
+
+INSERT INTO `gre` (`qset`, `qno`, `question`, `option1`, `option2`, `option3`, `option4`, `result`, `analysis`) VALUES
+('1', '1', 'Who is Barak Obama?', 'President of USA', 'President of India', 'President of pakistan', 'president of ja[an', 'a', 'Its world known fact.');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `java`
+--
+
+CREATE TABLE `java` (
+  `qset` varchar(2) NOT NULL,
+  `qno` varchar(10) NOT NULL,
+  `question` varchar(250) NOT NULL,
+  `option1` varchar(25) NOT NULL,
+  `option2` varchar(25) NOT NULL,
+  `option3` varchar(25) NOT NULL,
+  `option4` varchar(25) NOT NULL,
+  `result` varchar(2) NOT NULL,
+  `analysis` varchar(400) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `java`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `photos`
+--
+
+CREATE TABLE `photos` (
+  `aid` int(10) NOT NULL,
+  `pid` int(10) NOT NULL,
+  `photoadd` varchar(30) NOT NULL,
+  `date` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `photos`
+--
+
+INSERT INTO `photos` (`aid`, `pid`, `photoadd`, `date`) VALUES
+(7, 1, '02042011114.jpg', '2011/04/04'),
+(7, 2, '02042011115.jpg', '2011/04/04'),
+(7, 3, '02042011118.jpg', '2011/04/04'),
+(7, 4, '02042011123.jpg', '2011/04/04'),
+(7, 5, '02042011124.jpg', '2011/04/04'),
+(8, 1, '7686.jpg', '2011/04/17'),
+(8, 2, '6786.jpg', '2011/04/17'),
+(8, 3, '6864.jpg', '2011/04/17'),
+(8, 4, '7686.jpg', '2011/04/17'),
+(8, 5, '9098.jpg', '2011/04/17'),
+(8, 6, '678686789.jpg', '2011/04/17');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `profile`
+--
+
+CREATE TABLE `profile` (
+  `username` varchar(25) NOT NULL,
+  `school` varchar(50) NOT NULL,
+  `college` varchar(50) NOT NULL,
+  `gcoll` varchar(50) NOT NULL,
+  `mobile` varchar(12) NOT NULL,
+  `status` varchar(15) NOT NULL,
+  `you` varchar(101) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `profile`
+--
+
+INSERT INTO `profile` (`username`, `school`, `college`, `gcoll`, `mobile`, `status`, `you`) VALUES
+('Sonam', 'CHNS', 'KMHS', '', '7208401073', 'single', 'i am the best'),
+('MANOJ', 'CHNS', 'Birla college', 'RAIT', '7208401074', 'single', 'i am the game and i want to play.................'),
+('Prakhil1', '', '', '', '', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `profilepic`
+--
+
+CREATE TABLE `profilepic` (
+  `username` varchar(20) NOT NULL,
+  `picadd` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `profilepic`
+--
+
+INSERT INTO `profilepic` (`username`, `picadd`) VALUES
+('MANOJ', 'Photo-0230.jpg'),
+('Sonam', 'Sonam p.jpg'),
+('Rahul', '02042011121.jpg'),
+('Prakhil1', '44.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `scrap`
+--
+
+CREATE TABLE `scrap` (
+  `send_to` varchar(15) NOT NULL,
+  `message` varchar(15) NOT NULL,
+  `sent_from` varchar(15) NOT NULL,
+  `time` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `scrap`
+--
+
+INSERT INTO `scrap` (`send_to`, `message`, `sent_from`, `time`) VALUES
+('prakhil', 'hiiiiii champ', 'Prakhil1', '1303068781'),
+('MANOJ', 'dasd', 'MANOJ', '1303068781'),
+('Sonam', 'hiiiiiiii', 'MANOJ', '1303068781'),
+('MANOJ', 'kya kar raha ah', 'Rahul', '1303068781'),
+('Rahul', 'kuch nahi timep', 'MANOJ', '1303068781'),
+('Sonam', 'hello.........', 'MANOJ', '1303068781');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `search`
+--
+
+CREATE TABLE `search` (
+  `username` varchar(25) NOT NULL,
+  `fname` varchar(20) NOT NULL,
+  `lname` varchar(20) NOT NULL,
+  PRIMARY KEY  (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `search`
+--
+
+INSERT INTO `search` (`username`, `fname`, `lname`) VALUES
+('MANOJ', 'null', 'null'),
+('prakhil', 'manoj', ''),
+('Sonam', 'null', 'null');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `statupdate`
+--
+
+CREATE TABLE `statupdate` (
+  `sid` int(4) NOT NULL,
+  `susername` varchar(20) NOT NULL,
+  `sname` varchar(100) NOT NULL,
+  `time` varchar(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `statupdate`
+--
+
+INSERT INTO `statupdate` (`sid`, `susername`, `sname`, `time`) VALUES
+(21, 'Sonam', 'ti tu titu', '1300324795'),
+(22, 'Tushar', 'Main tushar hoon, main mandane hoon, main chutiya hoon', '1300324826'),
+(24, 'MANOJ', 'helloooooo', '1300327121'),
+(27, 'MANOJ', 'r u ready............?', '1300945372'),
+(28, 'MANOJ', 'i am best', '1300996932'),
+(30, 'MANOJ', 'i am the game and i want to play', '1300996960'),
+(32, 'Rahul', 'how r u doing all..........', '1301972263'),
+(34, 'Prakhil1', 'heeeeee yaaaaaa', '1303355746'),
+(35, 'Sonam', 'hello\r\n', '1303585479'),
+(36, 'MANOJ', 'commo', '1303585694'),
+(38, 'MANOJ', 'hello', '1303585777');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `validate`
+--
+
+CREATE TABLE `validate` (
+  `fname` varchar(15) NOT NULL,
+  `lname` varchar(15) NOT NULL,
+  `username` varchar(15) NOT NULL,
+  `password` varchar(300) NOT NULL,
+  `country` varchar(25) NOT NULL,
+  `city` varchar(8) NOT NULL,
+  `dd` varchar(3) NOT NULL,
+  `mm` varchar(3) NOT NULL,
+  `yy` varchar(5) NOT NULL,
+  `gender` varchar(6) NOT NULL,
+  `email` varchar(25) NOT NULL,
+  `flag` varchar(4) NOT NULL,
+  `place` varchar(50) NOT NULL,
+  `person` varchar(50) NOT NULL,
+  UNIQUE KEY `email` (`email`),
+  UNIQUE KEY `username` (`username`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `validate`
+--
+
+INSERT INTO `validate` (`fname`, `lname`, `username`, `password`, `country`, `city`, `dd`, `mm`, `yy`, `gender`, `email`, `flag`, `place`, `person`) VALUES
+('Gaurav', 'Deshmukh', 'Gaurav', '6345a2b19cec4acf39613917d906d7cf', 'india', 'Mumbai', '1', '1', '1995', 'Male', 'gaurav@gmail.com', 'OFF', 'pune', 'sachin'),
+('MANOJ', 'dubey', 'MANOJ', '6345a2b19cec4acf39613917d906d7cf', 'india', 'bhiwandi', '11', '8', '1990', 'Male', 'mjdubey1990@gmail.com', 'OFF', 'Mumbai', 'Sachin'),
+('Sonam', 'Dubey', 'Sonam', '6345a2b19cec4acf39613917d906d7cf', 'india', 'bhiwandi', '1', '1', '1995', 'Female', 'mjdubey1990@yahoo.in', 'OFF', 'Mumbai', 'Sachin'),
+('Prakhil', 'naik', 'Prakhil1', 'a029037084b5c3c8a5e6b3d3b4269c5c', 'india', 'nerul', '1', '1', '1995', 'Male', 'prakhil123@gmail', 'OFF', 'Mumbai', 'Sachin'),
+('Rahul ', 'Singh', 'Rahul', '6345a2b19cec4acf39613917d906d7cf', 'india', 'bhiwandi', '1', '1', '1995', 'Male', 'rahulsingh@yahoo.in', 'OFF', 'Mumbai', 'Sachin'),
+('Tushar', 'mandhane', 'Tushar', 'a029037084b5c3c8a5e6b3d3b4269c5c', 'india', 'bhiwandi', '1', '1', '1990', 'Male', 'tushkirait@gmail.com', 'OFF', 'Mumbai', 'Sachin');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `vcounter`
+--
+
+CREATE TABLE `vcounter` (
+  `count` int(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `vcounter`
+--
+
+INSERT INTO `vcounter` (`count`) VALUES
+(5);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `video`
+--
+
+CREATE TABLE `video` (
+  `vid` int(20) NOT NULL,
+  `username` varchar(25) NOT NULL,
+  `vname` varchar(50) NOT NULL,
+  `vface` varchar(50) NOT NULL,
+  `vtype` varchar(25) NOT NULL,
+  `date` varchar(10) NOT NULL,
+  `vdescripn` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `video`
+--
+
+INSERT INTO `video` (`vid`, `username`, `vname`, `vface`, `vtype`, `date`, `vdescripn`) VALUES
+(4, 'MANOJ', 'prob', '0.0000001.wmv', 'video/x-ms-wmv', '2011/03/29', 'aasman'),
+(5, 'MANOJ', 'Rajnikant', 'American Rajnikanth.dat.wmv', 'video/x-ms-wmv', '2011/03/30', 'entertaiment');

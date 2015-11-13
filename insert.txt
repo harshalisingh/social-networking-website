@@ -1,0 +1,11 @@
+
+insert into test values('cpt');
+insert into test values('icwa');
+insert into test values('cs');
+insert into test values('history');
+insert into test values('cat');
+insert into test values('gre');
+insert into test values('gate');
+insert into test values('c++');
+insert into test values('java');
+insert into test values('gmat');
